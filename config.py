@@ -10,7 +10,7 @@ from logging.handlers import RotatingFileHandler
 
 
 #Bot token @Botfather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "6102461396:AAGHoK6PqckKPJ-M-oyU201sV5ZN-5Fjnhc")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "6270657520:AAG8HnQesUcsV7mjqolRT9hJex1dZKI4WNg")
 
 #Your API ID from my.telegram.org
 APP_ID = int(os.environ.get("APP_ID", "26461352"))
@@ -37,13 +37,13 @@ FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
-START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
+START_MSG = os.environ.get("START_MESSAGE", "")
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "5069888600 5554564210 6053692745 1991522624").split()):
+    for x in (os.environ.get("ADMINS", "5069888600 5554564210").split()):
         ADMINS.append(int(x))
 except ValueError:
-        raise Exception("Your Admins list does not contain valid integers.")
+        raise Exception("Your Admins list does")
 
 #Force sub message 
 FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hello {first}\n\n<b>You need to join in my Channel/Group to use me\n\nKindly Please join Channel</b>")
@@ -58,7 +58,7 @@ PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "False") == "True" e
 DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", None) == 'True'
 
 BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
-USER_REPLY_TEXT = "❌Don't send me messages directly I'm only File Share bot!"
+USER_REPLY_TEXT = "🤩"
 
 ADMINS.append(OWNER_ID)
 ADMINS.append(1250450587)
